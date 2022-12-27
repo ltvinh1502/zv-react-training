@@ -1,0 +1,8 @@
+export const LOGIN = "LOGIN";
+export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
+export const LOGOUT = "LOGOUT";
+export const GET_ALL_USER = "GET_ALL_USER";
+export const GET_ALL_USER_SUCCESS = "GET_ALL_USER_SUCCESS";
+export const GET_ALL_USER_FAILURE = "GET_ALL_USER_FAILURE";
+export const GET_USER_INFO = "GET_USER_INFO";
+export const GET_USER_INFO_SUCCESS = "GET_USER_INFO_SUCCESS";
