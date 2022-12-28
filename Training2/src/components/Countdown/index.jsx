@@ -10,11 +10,11 @@ const Countdown = ({ number, setIsProgress }) => {
                 setNumberCountdown(numberCountdown - 1);
             }, 1000);
         if (numberCountdown <= 0) {
-            setIsProgress(false);
+            setIsProgress();
         }
     }, [numberCountdown]);
 
-    return <div>{numberCountdown}</div>;
+    return <>{numberCountdown}</>;
 };
 
 export default Countdown;
