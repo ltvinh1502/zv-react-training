@@ -9,9 +9,7 @@ const axiosClient = axios.create({
 axiosClient.interceptors.request.use(
     function (config) {
         // Do something before request is sent
-        const TOKEN = JSON.parse(
-            JSON.parse(localStorage.getItem("persist:root")).user
-        ).token;
+        const TOKEN = localStorage.getItem("token");
         if (TOKEN) {
             config.headers.Authorization = `Bearer ${TOKEN}`;
         }

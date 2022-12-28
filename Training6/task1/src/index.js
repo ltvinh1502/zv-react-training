@@ -7,7 +7,7 @@ import App from "./App";
 
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
-import { persistor, store } from "./services/store";
+import { persistor, store } from "./redux/app/store";
 import { history } from "./utils/history";
 
 import "react-toastify/dist/ReactToastify.css";
@@ -16,26 +16,26 @@ const container = document.getElementById("root");
 const root = createRoot(container);
 
 root.render(
-    <React.StrictMode>
-        <Provider store={store}>
-            <PersistGate loading={"loading"} persistor={persistor}>
-                <HistoryRouter history={history}>
-                    <ToastContainer
-                        position="top-right"
-                        autoClose={5000}
-                        hideProgressBar={false}
-                        newestOnTop={false}
-                        closeOnClick
-                        rtl={false}
-                        pauseOnFocusLoss={false}
-                        draggable
-                        pauseOnHover={false}
-                    />
-                    <App />
-                </HistoryRouter>
-            </PersistGate>
-        </Provider>
-    </React.StrictMode>
+  <React.StrictMode>
+    <Provider store={store}>
+      <PersistGate loading={"loading"} persistor={persistor}>
+        <HistoryRouter history={history}>
+          <ToastContainer
+            position="top-right"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss={false}
+            draggable
+            pauseOnHover={false}
+          />
+          <App />
+        </HistoryRouter>
+      </PersistGate>
+    </Provider>
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

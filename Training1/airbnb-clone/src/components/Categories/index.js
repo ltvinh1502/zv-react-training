@@ -17,9 +17,7 @@ const Categories = () => {
           {data.map((item, index) => (
             <Category
               key={index}
-              id={item.id}
-              imageUrl={item.imageUrl}
-              title={item.title}
+              category={item}
               handleDeleteItem={handleDeleteItem}
             />
           ))}

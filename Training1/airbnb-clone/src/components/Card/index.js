@@ -22,7 +22,7 @@ const responsive = {
     items: 1,
   },
 };
-const Card = () => {
+const Card = ({ card }) => {
   return (
     <div className="relative mt-5 cursor-pointer rounded-xl">
       <FaHeart className="absolute z-30 top-2 right-2" color="white" />
@@ -50,17 +50,15 @@ const Card = () => {
       </Carousel>
       <div className="flex flex-col">
         <div className="flex justify-between items-center">
-          <span className="font-bold whitespace-nowrap">
-            Thành phố Nha Trang, Việt Nam
-          </span>
+          <span className="font-bold whitespace-nowrap">{card.city}</span>
           <span className="flex">
-            <AiFillStar /> 4,5
+            <AiFillStar /> {card.star}
           </span>
         </div>
         <span>Hướng biển</span>
-        <span>Ngày 08 - Ngày 13 tháng 1</span>
+        <span>{card.date}</span>
         <span>
-          <span className="font-bold">$1.190</span> đêm
+          <span className="font-bold">${card.price}</span> đêm
         </span>
       </div>
     </div>
