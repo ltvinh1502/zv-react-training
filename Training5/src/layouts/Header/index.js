@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { selectUserInfo, userActions } from "../../redux/features/user/userSlice";
+import { selectUserInfo, userActions } from "../../redux/features/userSlice";
 const Header = () => {
   const [openPopup, setOpenPopup] = useState(false);
   const navigate = useNavigate();

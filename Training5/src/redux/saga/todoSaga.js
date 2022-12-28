@@ -1,6 +1,6 @@
 import { all, call, put, takeEvery, takeLatest } from "redux-saga/effects";
-import todoApi from "../../../middleware/api/todoApi";
-import { todoActions } from "./todoSlice";
+import todoApi from "../../services/api/todosApi";
+import { todoActions } from "../features/todoSlice";
 
 function* getAllTodo() {
   try {

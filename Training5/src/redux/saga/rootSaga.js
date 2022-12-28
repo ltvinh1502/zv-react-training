@@ -1,6 +1,6 @@
 import { all } from "redux-saga/effects";
-import todoSaga from "../features/todo/todoSaga";
-import userSaga from "../features/user/userSaga";
+import todoSaga from "./todoSaga";
+import userSaga from "./userSaga";
 
 function* helloSaga() {
   console.log("Hello saga");

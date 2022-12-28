@@ -7,7 +7,7 @@ import User from "../../../components/User";
 import {
     selectUserList,
     userActions
-} from "../../../redux/features/user/userSlice";
+} from "../../../redux/features/userSlice";
 import { alertError } from "../../../utils/alert";
 const Users = () => {
   const userList = useSelector(selectUserList);

@@ -1,21 +1,21 @@
-import axiosTask1 from "./axiosTask1";
+import axiosClient from "./axiosClient";
 
 const todoApi = {
     getAllTodo() {
         const url = "/todos";
-        return axiosTask1.get(url);
+        return axiosClient.get(url);
     },
     deleteTodo(todoId) {
         const url = `/todos/${todoId}`;
-        return axiosTask1.delete(url);
+        return axiosClient.delete(url);
     },
     addTodo(todo) {
         const url = "/todos";
-        return axiosTask1.post(url, todo);
+        return axiosClient.post(url, todo);
     },
     updateTodo(todoId, todo) {
         const url = `/todos/${todoId}`;
-        return axiosTask1.put(url, todo);
+        return axiosClient.put(url, todo);
     },
 };
 export default todoApi;

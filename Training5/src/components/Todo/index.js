@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { todoActions } from "../../redux/features/todo/todoSlice";
+import { todoActions } from "../../redux/features/todoSlice";
 import Modal from "../Modal";
 
 const Todo = ({ id, name, completed }) => {

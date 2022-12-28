@@ -20,10 +20,10 @@ function App() {
       <Route element={<MainLayout />}>
         <Route path="*" element={<CheckRoute />} />
         <Route path="/" element={<Home />} />
-        <Route path="/task1" element={<Task1 />} />
+        <Route path="task1" element={<Task1 />} />
         <Route element={<ProtectedRoutes />}>
           <Route path="task2" element={<Task2Layout />}>
-            <Route path="" element={<HomeTask2 />} />
+            <Route path="home" element={<HomeTask2 />} />
             <Route path="users">
               <Route path="" element={<Users />} />
               <Route path=":id" element={<Users />} />

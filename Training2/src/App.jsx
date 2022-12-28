@@ -32,8 +32,8 @@ function App() {
     }, 1000),
     [valueNumber]
   );
-  const showModal = () => setIsShow(!isShow);
   const stopCountdown = () => setIsProgress(false);
+  const showModal = () => setIsShow(!isShow);
   useEffect(() => {
     inputRef.current.focus();
   }, []);
@@ -50,12 +50,12 @@ function App() {
       {isProgress ? (
         <div className="flex">
           <button onClick={stopCountdown}>Stop</button>
-          <Countdown setIsProgress={stopCountdown} number={valueNumber} />
+          <Countdown stopCountdown={stopCountdown} number={valueNumber} />
         </div>
       ) : (
         <button onClick={checkValue}>Start</button>
       )}
-      {isShow && <Modal onShowModal={showModal} content={contentModal} />}
+      {isShow && <Modal closeModal={showModal} content={contentModal} />}
     </div>
   );
 }

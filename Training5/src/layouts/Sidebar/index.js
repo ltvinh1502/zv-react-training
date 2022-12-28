@@ -5,7 +5,7 @@ const Sidebar = () => {
     <ul>
       <li>
         <NavLink
-          to="/task2/"
+          to="/task2/home"
           className={({ isActive }) =>
             [
               "group flex items-center px-2 py-2 text-base font-medium rounded-md",

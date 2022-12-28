@@ -11,50 +11,29 @@ const userSlice = createSlice({
   initialState,
   reducers: {
     login(state, action) {
-      return {
-        ...state,
-        loading: true,
-      };
+      state.loading = true;
     },
     loginSuccess(state, action) {
       const { token } = action.payload;
       localStorage.setItem("token", token);
-      return {
-        ...state,
-        loading: false,
-      };
+      state.loading = false;
     },
     getUserInfo(state, action) {
-      return {
-        ...state,
-        loading: true,
-      };
+      state.loading = true;
     },
     getUserInfoSuccess(state, action) {
-      return {
-        ...state,
-        loading: false,
-        userInfo: action.payload,
-      };
+      state.loading = false;
+      state.userInfo = action.payload;
     },
     getAllUser(state, action) {
-      return {
-        ...state,
-        loading: true,
-      };
+      state.loading = true;
     },
     getAllUserSuccess(state, action) {
-      return {
-        ...state,
-        loading: false,
-        users: [...action.payload.users],
-      };
+      state.loading = false;
+      state.users = [...action.payload.users];
     },
     getAllUserFailure(state, action) {
-      return {
-        ...state,
-        loading: false,
-      };
+      state.loading = false;
     },
   },
 });

@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 
-const Countdown = ({ number, setIsProgress }) => {
+const Countdown = ({ number, stopCountdown }) => {
     const [numberCountdown, setNumberCountdown] = useState(number);
     useEffect(() => {
         numberCountdown > 0 &&
@@ -10,7 +10,7 @@ const Countdown = ({ number, setIsProgress }) => {
                 setNumberCountdown(numberCountdown - 1);
             }, 1000);
         if (numberCountdown <= 0) {
-            setIsProgress();
+            stopCountdown();
         }
     }, [numberCountdown]);
 

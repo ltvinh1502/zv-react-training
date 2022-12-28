@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
 import createSagaMiddleware from "redux-saga";
-import rootSaga from "./rootSaga";
-import userReducer from "../features/user/userSlice";
-import todoReducer from "../features/todo/todoSlice";
+import rootSaga from "./saga/rootSaga";
+import userReducer from "./features/userSlice";
+import todoReducer from "./features/todoSlice";
 
 const sagaMiddleware = createSagaMiddleware();
 export const store = configureStore({

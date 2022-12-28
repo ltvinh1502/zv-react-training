@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { v4 as uuidv4 } from "uuid";
-import { todoActions } from "../../redux/features/todo/todoSlice";
+import { todoActions } from "../../redux/features/todoSlice";
 const Modal = ({ setShowModal, id, showModal, name, completed, addModal }) => {
   const [inputField, setInputField] = useState({
     id: id || uuidv4(),

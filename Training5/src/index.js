@@ -7,7 +7,7 @@ import App from "./App";
 
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
-import { store } from "./redux/app/store";
+import { store } from "./redux/store";
 import { history } from "./utils/history";
 
 import "react-toastify/dist/ReactToastify.css";

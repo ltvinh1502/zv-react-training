@@ -7,7 +7,7 @@ import {
   selectFilterData,
   selectTodoList,
   todoActions
-} from "../../redux/features/todo/todoSlice";
+} from "../../redux/features/todoSlice";
 const Task1 = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
