@@ -1,8 +1,0 @@
-export const GET_TODO_LIST = "GET_TODO_LIST";
-export const GET_TODO_LIST_SUCCESS = "GET_TODO_LIST_SUCCESS";
-export const ADD_TODO = "ADD_TODO";
-export const UPDATE_TODO = "UPDATE_TODO";
-export const DELETE_TODO = "DELETE_TODO";
-export const FILTER_TODO = "FILTER_TODO";
-export const SEARCH_TODO = "SEARCH_TODO";
-
